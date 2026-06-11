@@ -1,0 +1,8 @@
+# Pins for .venv_mnn38 (Python 3.8 + mnnpy + bridge-compatible stack)
+# Recreate: pyenv local 3.8.19 && python -m venv .venv_mnn38 && source .venv_mnn38/bin/activate && pip install -r requirements_mnn38.txt
+numpy==1.22.4
+scipy==1.7.3
+scanpy>=1.9,<1.11
+mnnpy
+h5py
+anndata<0.10

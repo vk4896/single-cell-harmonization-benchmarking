@@ -1,0 +1,66 @@
+[2025-10-05 03:18:23,862] INFO - scETM.trainers.UnsupervisedTrainer: ckpt_dir: ./scetm_results/scETM_training_10_05-03_18_23
+[2025-10-05 03:18:23,862] INFO - scETM.logging_utils: UnsupervisedTrainer.train(<scETM.trainers.UnsupervisedTrainer.UnsupervisedTrainer object at 0x7f0ef5a0ddd0>, n_epochs = 1200, eval_every = 200, n_samplers = 4, eval = False)
+[2025-10-05 03:18:27,365] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 0==========
+[2025-10-05 03:18:27,365] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10195193856, vms=20797005824, shared=531369984, text=3207168, lib=0, data=10650910720, dirty=0)
+[2025-10-05 03:18:27,365] INFO - scETM.trainers.UnsupervisedTrainer: lr          :        0.005
+[2025-10-05 03:18:27,365] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :            0
+[2025-10-05 03:18:27,365] INFO - scETM.trainers.trainer_utils: loss        :      17.73
+[2025-10-05 03:18:27,366] INFO - scETM.trainers.trainer_utils: nll         :      17.73
+[2025-10-05 03:18:27,366] INFO - scETM.trainers.trainer_utils: kl_delta    :     0.3839
+[2025-10-05 03:18:27,366] INFO - scETM.trainers.trainer_utils: max_norm    :       5.72
+[2025-10-05 03:18:27,366] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========
+[2025-10-05 07:53:19,473] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 200==========
+[2025-10-05 07:53:19,474] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10439548928, vms=21160767488, shared=532512768, text=3207168, lib=0, data=11023151104, dirty=0)
+[2025-10-05 07:53:19,475] INFO - scETM.trainers.UnsupervisedTrainer: lr          :    4.305e-07
+[2025-10-05 07:53:19,475] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :        5e-08
+[2025-10-05 07:53:19,507] INFO - scETM.trainers.trainer_utils: loss        :       7.04
+[2025-10-05 07:53:19,544] INFO - scETM.trainers.trainer_utils: nll         :       7.04
+[2025-10-05 07:53:19,555] INFO - scETM.trainers.trainer_utils: kl_delta    :      354.5
+[2025-10-05 07:53:19,641] INFO - scETM.trainers.trainer_utils: max_norm    :    0.01974
+[2025-10-05 07:53:20,225] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========
+[2025-10-05 12:28:24,192] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 400==========
+[2025-10-05 12:28:24,193] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10473832448, vms=21097664512, shared=532627456, text=3207168, lib=0, data=10964672512, dirty=0)
+[2025-10-05 12:28:24,194] INFO - scETM.trainers.UnsupervisedTrainer: lr          :    3.707e-11
+[2025-10-05 12:28:24,194] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :        1e-07
+[2025-10-05 12:28:24,248] INFO - scETM.trainers.trainer_utils: loss        :      7.037
+[2025-10-05 12:28:24,279] INFO - scETM.trainers.trainer_utils: nll         :      7.037
+[2025-10-05 12:28:24,286] INFO - scETM.trainers.trainer_utils: kl_delta    :      358.8
+[2025-10-05 12:28:24,363] INFO - scETM.trainers.trainer_utils: max_norm    :    0.01565
+[2025-10-05 12:28:24,922] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========
+[2025-10-05 17:03:54,390] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 600==========
+[2025-10-05 17:03:54,392] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10398007296, vms=21277954048, shared=532627456, text=3207168, lib=0, data=11145859072, dirty=0)
+[2025-10-05 17:03:54,392] INFO - scETM.trainers.UnsupervisedTrainer: lr          :    3.191e-15
+[2025-10-05 17:03:54,393] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :        1e-07
+[2025-10-05 17:03:54,445] INFO - scETM.trainers.trainer_utils: loss        :      7.037
+[2025-10-05 17:03:54,478] INFO - scETM.trainers.trainer_utils: nll         :      7.037
+[2025-10-05 17:03:54,511] INFO - scETM.trainers.trainer_utils: kl_delta    :      358.7
+[2025-10-05 17:03:54,625] INFO - scETM.trainers.trainer_utils: max_norm    :    0.01566
+[2025-10-05 17:03:55,060] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========
+[2025-10-05 21:40:51,944] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 800==========
+[2025-10-05 21:40:51,956] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10430562304, vms=21232881664, shared=532627456, text=3207168, lib=0, data=11101380608, dirty=0)
+[2025-10-05 21:40:51,956] INFO - scETM.trainers.UnsupervisedTrainer: lr          :    2.748e-19
+[2025-10-05 21:40:51,956] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :        1e-07
+[2025-10-05 21:40:52,007] INFO - scETM.trainers.trainer_utils: loss        :      7.037
+[2025-10-05 21:40:52,034] INFO - scETM.trainers.trainer_utils: nll         :      7.037
+[2025-10-05 21:40:52,082] INFO - scETM.trainers.trainer_utils: kl_delta    :      358.7
+[2025-10-05 21:40:52,195] INFO - scETM.trainers.trainer_utils: max_norm    :    0.01566
+[2025-10-05 21:40:52,571] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========
+[2025-10-06 02:14:57,630] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 1000==========
+[2025-10-06 02:14:57,632] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10515230720, vms=21323026432, shared=532627456, text=3207168, lib=0, data=11191980032, dirty=0)
+[2025-10-06 02:14:57,632] INFO - scETM.trainers.UnsupervisedTrainer: lr          :    2.366e-23
+[2025-10-06 02:14:57,633] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :        1e-07
+[2025-10-06 02:14:57,710] INFO - scETM.trainers.trainer_utils: loss        :      7.037
+[2025-10-06 02:14:57,750] INFO - scETM.trainers.trainer_utils: nll         :      7.037
+[2025-10-06 02:14:57,783] INFO - scETM.trainers.trainer_utils: kl_delta    :      358.7
+[2025-10-06 02:14:57,867] INFO - scETM.trainers.trainer_utils: max_norm    :    0.01566
+[2025-10-06 02:14:58,245] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========
+[2025-10-06 06:50:20,391] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 1200==========
+[2025-10-06 06:50:20,391] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10200186880, vms=20681379840, shared=533045248, text=3207168, lib=0, data=10553364480, dirty=0)
+[2025-10-06 06:50:20,392] INFO - scETM.trainers.UnsupervisedTrainer: lr          :    2.037e-27
+[2025-10-06 06:50:20,392] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :        1e-07
+[2025-10-06 06:50:20,411] INFO - scETM.trainers.trainer_utils: loss        :      7.037
+[2025-10-06 06:50:20,419] INFO - scETM.trainers.trainer_utils: nll         :      7.037
+[2025-10-06 06:50:20,425] INFO - scETM.trainers.trainer_utils: kl_delta    :      358.7
+[2025-10-06 06:50:20,472] INFO - scETM.trainers.trainer_utils: max_norm    :    0.01565
+[2025-10-06 06:50:20,731] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========
+[2025-10-06 06:50:20,732] INFO - scETM.trainers.UnsupervisedTrainer: Optimization Finished: ./scetm_results/scETM_training_10_05-03_18_23

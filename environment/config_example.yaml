@@ -1,0 +1,62 @@
+# Example configuration file for scETM Harmony Classifier
+# Copy this file and modify as needed for your specific use case
+
+# Input files
+input:
+  disease_file: "downloaded_adata_diseases_unharmonized.h5ad"
+  parse_file: "adata_parse.h5ad"
+
+# Output configuration
+output:
+  output_dir: "./results"
+  output_embedding: "scetm_harmony_harmonized.h5ad"
+  log_file: null  # Set to a path to enable file logging
+
+# Harmony integration parameters
+harmony:
+  theta: 2.0
+  max_iter: 20
+
+# scETM training parameters
+scetm:
+  epochs: 200
+  results_dir: "./scetm_disease_results"
+
+# Classification parameters
+classification:
+  test_size: 0.2
+  use_embeddings: true
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+
+# Example configurations for different scenarios:
+
+# Quick test run (fewer epochs, smaller test set)
+quick_test:
+  scetm:
+    epochs: 50
+  classification:
+    test_size: 0.1
+  harmony:
+    max_iter: 10
+
+# High-quality run (more epochs, larger test set)
+high_quality:
+  scetm:
+    epochs: 500
+  classification:
+    test_size: 0.3
+  harmony:
+    max_iter: 50
+    theta: 1.5
+
+# Debug run (verbose logging, fewer epochs)
+debug:
+  logging:
+    level: "DEBUG"
+  scetm:
+    epochs: 10
+  harmony:
+    max_iter: 5

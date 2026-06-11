@@ -1,0 +1,11 @@
+[2025-10-05 03:17:23,129] INFO - scETM.trainers.UnsupervisedTrainer: ckpt_dir: ./scetm_results/scETM_training_10_05-03_17_23
+[2025-10-05 03:17:23,130] INFO - scETM.logging_utils: UnsupervisedTrainer.train(<scETM.trainers.UnsupervisedTrainer.UnsupervisedTrainer object at 0x7f64d5358f50>, n_epochs = 1200, eval_every = 200, n_samplers = 4, eval = False)
+[2025-10-05 03:17:27,271] INFO - scETM.trainers.UnsupervisedTrainer: ==========Epoch 0==========
+[2025-10-05 03:17:27,271] INFO - scETM.trainers.UnsupervisedTrainer: pmem(rss=10185789440, vms=20729860096, shared=529801216, text=3207168, lib=0, data=10644578304, dirty=0)
+[2025-10-05 03:17:27,272] INFO - scETM.trainers.UnsupervisedTrainer: lr          :        0.005
+[2025-10-05 03:17:27,272] INFO - scETM.trainers.UnsupervisedTrainer: kl_weight   :            0
+[2025-10-05 03:17:27,272] INFO - scETM.trainers.trainer_utils: loss        :      17.28
+[2025-10-05 03:17:27,272] INFO - scETM.trainers.trainer_utils: nll         :      17.28
+[2025-10-05 03:17:27,272] INFO - scETM.trainers.trainer_utils: kl_delta    :     0.3814
+[2025-10-05 03:17:27,272] INFO - scETM.trainers.trainer_utils: max_norm    :      8.699
+[2025-10-05 03:17:27,272] INFO - scETM.trainers.UnsupervisedTrainer: ==========End of evaluation==========

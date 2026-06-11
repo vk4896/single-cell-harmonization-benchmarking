@@ -1,0 +1,312 @@
+2025-11-06 10:23:40 - INFO - loaded all imports
+2025-11-06 10:23:40 - INFO - fixed ccAF bug
+2025-11-06 10:23:40 - INFO - ======================================================================
+2025-11-06 10:23:40 - INFO - COMPREHENSIVE ccAF EVALUATION
+2025-11-06 10:23:40 - INFO - ======================================================================
+2025-11-06 10:23:40 - INFO - Started at: 2025-11-06 10:23:40
+2025-11-06 10:23:40 - INFO - 
+======================================================================
+2025-11-06 10:23:40 - INFO - STEP 1: Creating baseline from original data X_pca
+2025-11-06 10:23:40 - INFO - ======================================================================
+2025-11-06 10:23:40 - INFO - Loading original data from: combined_data.h5ad
+2025-11-06 10:23:49 - INFO - Loaded original: 1560000 cells, 5634 genes
+2025-11-06 10:23:56 - INFO - Subset to first 780000 cells
+2025-11-06 10:23:56 - INFO - Getting baseline predictions from original X_pca...
+2025-11-06 10:23:56 - DEBUG - Preparing embedding matrix with shape (780000, 50) for ccAF (expects 1472 features)
+2025-11-06 10:23:59 - DEBUG -  - Padded features: added 1422 zero columns to reach 1472
+2025-11-06 10:23:59 - DEBUG -  - Built AnnData: X shape (780000, 1472), var names set to ccAF genes
+2025-11-06 10:23:59 - INFO - Starting batched ccAF predictions: 780000 cells in 16 batches of up to 50000
+2025-11-06 10:23:59 - INFO - Batch 1/16: rows 0:50000
+2025-11-06 10:24:03 - INFO - Batch 2/16: rows 50000:100000
+2025-11-06 10:24:06 - INFO - Batch 3/16: rows 100000:150000
+2025-11-06 10:24:09 - INFO - Batch 4/16: rows 150000:200000
+2025-11-06 10:24:12 - INFO - Batch 5/16: rows 200000:250000
+2025-11-06 10:24:16 - INFO - Batch 6/16: rows 250000:300000
+2025-11-06 10:24:19 - INFO - Batch 7/16: rows 300000:350000
+2025-11-06 10:24:21 - INFO - Batch 8/16: rows 350000:400000
+2025-11-06 10:24:24 - INFO - Batch 9/16: rows 400000:450000
+2025-11-06 10:24:28 - INFO - Batch 10/16: rows 450000:500000
+2025-11-06 10:24:31 - INFO - Batch 11/16: rows 500000:550000
+2025-11-06 10:24:34 - INFO - Batch 12/16: rows 550000:600000
+2025-11-06 10:24:37 - INFO - Batch 13/16: rows 600000:650000
+2025-11-06 10:24:40 - INFO - Batch 14/16: rows 650000:700000
+2025-11-06 10:24:43 - INFO - Batch 15/16: rows 700000:750000
+2025-11-06 10:24:45 - INFO - Batch 16/16: rows 750000:780000
+2025-11-06 10:24:47 - INFO - Completed batched predictions
+2025-11-06 10:24:48 - INFO - Baseline predictions shape: 780000
+2025-11-06 10:24:48 - INFO - Baseline prediction distribution:
+2025-11-06 10:24:48 - INFO - 
+G1            342069
+Late G1       226137
+G2/M           89850
+S/G2           39194
+S              33496
+G1/other       26913
+Neural G0      21464
+M/Early G1       877
+Name: count, dtype: int64
+2025-11-06 10:24:48 - INFO - 
+======================================================================
+2025-11-06 10:24:48 - INFO - STEP 2: Comparing other embeddings from original data vs baseline
+2025-11-06 10:24:48 - INFO - ======================================================================
+2025-11-06 10:24:48 - INFO - Found embedding 'X_pca_harmony' with shape (780000, 50)
+2025-11-06 10:24:48 - INFO - Found embedding 'X_scanorama' with shape (780000, 100)
+2025-11-06 10:24:48 - INFO - Found embedding 'X_scetm' with shape (780000, 50)
+2025-11-06 10:24:48 - INFO - Found embedding 'X_scvi' with shape (780000, 10)
+2025-11-06 10:24:48 - INFO - 
+------------------------------------------------------------
+2025-11-06 10:24:48 - INFO - Predicting for original embedding: X_pca_harmony
+2025-11-06 10:24:48 - INFO - ------------------------------------------------------------
+2025-11-06 10:24:48 - DEBUG - Preparing embedding matrix with shape (780000, 50) for ccAF (expects 1472 features)
+2025-11-06 10:24:51 - DEBUG -  - Padded features: added 1422 zero columns to reach 1472
+2025-11-06 10:24:51 - DEBUG -  - Built AnnData: X shape (780000, 1472), var names set to ccAF genes
+2025-11-06 10:24:51 - INFO - Starting batched ccAF predictions: 780000 cells in 16 batches of up to 50000
+2025-11-06 10:24:51 - INFO - Batch 1/16: rows 0:50000
+2025-11-06 10:24:54 - INFO - Batch 2/16: rows 50000:100000
+2025-11-06 10:24:57 - INFO - Batch 3/16: rows 100000:150000
+2025-11-06 10:24:59 - INFO - Batch 4/16: rows 150000:200000
+2025-11-06 10:25:02 - INFO - Batch 5/16: rows 200000:250000
+2025-11-06 10:25:05 - INFO - Batch 6/16: rows 250000:300000
+2025-11-06 10:25:08 - INFO - Batch 7/16: rows 300000:350000
+2025-11-06 10:25:11 - INFO - Batch 8/16: rows 350000:400000
+2025-11-06 10:25:14 - INFO - Batch 9/16: rows 400000:450000
+2025-11-06 10:25:17 - INFO - Batch 10/16: rows 450000:500000
+2025-11-06 10:25:20 - INFO - Batch 11/16: rows 500000:550000
+2025-11-06 10:25:23 - INFO - Batch 12/16: rows 550000:600000
+2025-11-06 10:25:26 - INFO - Batch 13/16: rows 600000:650000
+2025-11-06 10:25:28 - INFO - Batch 14/16: rows 650000:700000
+2025-11-06 10:25:31 - INFO - Batch 15/16: rows 700000:750000
+2025-11-06 10:25:34 - INFO - Batch 16/16: rows 750000:780000
+2025-11-06 10:25:36 - INFO - Completed batched predictions
+2025-11-06 10:25:36 - INFO - Prediction distribution (top 10):
+2025-11-06 10:25:37 - INFO - 
+G1            253066
+G2/M          214113
+Late G1       123887
+G1/other       66229
+S/G2           52512
+S              47229
+Neural G0      15865
+M/Early G1      7099
+Name: count, dtype: int64
+2025-11-06 10:25:37 - INFO - 
+------------------------------------------------------------
+2025-11-06 10:25:37 - INFO - Predicting for original embedding: X_scanorama
+2025-11-06 10:25:37 - INFO - ------------------------------------------------------------
+2025-11-06 10:25:37 - DEBUG - Preparing embedding matrix with shape (780000, 100) for ccAF (expects 1472 features)
+2025-11-06 10:25:41 - DEBUG -  - Padded features: added 1372 zero columns to reach 1472
+2025-11-06 10:25:41 - DEBUG -  - Built AnnData: X shape (780000, 1472), var names set to ccAF genes
+2025-11-06 10:25:41 - INFO - Starting batched ccAF predictions: 780000 cells in 16 batches of up to 50000
+2025-11-06 10:25:41 - INFO - Batch 1/16: rows 0:50000
+2025-11-06 10:25:44 - INFO - Batch 2/16: rows 50000:100000
+2025-11-06 10:25:47 - INFO - Batch 3/16: rows 100000:150000
+2025-11-06 10:25:50 - INFO - Batch 4/16: rows 150000:200000
+2025-11-06 10:25:53 - INFO - Batch 5/16: rows 200000:250000
+2025-11-06 10:25:55 - INFO - Batch 6/16: rows 250000:300000
+2025-11-06 10:25:58 - INFO - Batch 7/16: rows 300000:350000
+2025-11-06 10:26:01 - INFO - Batch 8/16: rows 350000:400000
+2025-11-06 10:26:05 - INFO - Batch 9/16: rows 400000:450000
+2025-11-06 10:26:07 - INFO - Batch 10/16: rows 450000:500000
+2025-11-06 10:26:10 - INFO - Batch 11/16: rows 500000:550000
+2025-11-06 10:26:13 - INFO - Batch 12/16: rows 550000:600000
+2025-11-06 10:26:16 - INFO - Batch 13/16: rows 600000:650000
+2025-11-06 10:26:19 - INFO - Batch 14/16: rows 650000:700000
+2025-11-06 10:26:22 - INFO - Batch 15/16: rows 700000:750000
+2025-11-06 10:26:26 - INFO - Batch 16/16: rows 750000:780000
+2025-11-06 10:26:27 - INFO - Completed batched predictions
+2025-11-06 10:26:28 - INFO - Prediction distribution (top 10):
+2025-11-06 10:26:28 - INFO - 
+G1            313920
+Late G1       194927
+G2/M           83334
+G1/other       65040
+S              63733
+Neural G0      28396
+S/G2           20636
+M/Early G1     10014
+Name: count, dtype: int64
+2025-11-06 10:26:28 - INFO - 
+------------------------------------------------------------
+2025-11-06 10:26:28 - INFO - Predicting for original embedding: X_scetm
+2025-11-06 10:26:28 - INFO - ------------------------------------------------------------
+2025-11-06 10:26:28 - DEBUG - Preparing embedding matrix with shape (780000, 50) for ccAF (expects 1472 features)
+2025-11-06 10:26:30 - DEBUG -  - Padded features: added 1422 zero columns to reach 1472
+2025-11-06 10:26:30 - DEBUG -  - Built AnnData: X shape (780000, 1472), var names set to ccAF genes
+2025-11-06 10:26:31 - INFO - Starting batched ccAF predictions: 780000 cells in 16 batches of up to 50000
+2025-11-06 10:26:31 - INFO - Batch 1/16: rows 0:50000
+2025-11-06 10:26:33 - INFO - Batch 2/16: rows 50000:100000
+2025-11-06 10:26:37 - INFO - Batch 3/16: rows 100000:150000
+2025-11-06 10:26:39 - INFO - Batch 4/16: rows 150000:200000
+2025-11-06 10:26:42 - INFO - Batch 5/16: rows 200000:250000
+2025-11-06 10:26:45 - INFO - Batch 6/16: rows 250000:300000
+2025-11-06 10:26:47 - INFO - Batch 7/16: rows 300000:350000
+2025-11-06 10:26:51 - INFO - Batch 8/16: rows 350000:400000
+2025-11-06 10:26:53 - INFO - Batch 9/16: rows 400000:450000
+2025-11-06 10:26:56 - INFO - Batch 10/16: rows 450000:500000
+2025-11-06 10:26:59 - INFO - Batch 11/16: rows 500000:550000
+2025-11-06 10:27:02 - INFO - Batch 12/16: rows 550000:600000
+2025-11-06 10:27:05 - INFO - Batch 13/16: rows 600000:650000
+2025-11-06 10:27:07 - INFO - Batch 14/16: rows 650000:700000
+2025-11-06 10:27:10 - INFO - Batch 15/16: rows 700000:750000
+2025-11-06 10:27:13 - INFO - Batch 16/16: rows 750000:780000
+2025-11-06 10:27:15 - INFO - Completed batched predictions
+2025-11-06 10:27:15 - INFO - Prediction distribution (top 10):
+2025-11-06 10:27:15 - INFO - 
+S            534923
+G1           240701
+Late G1        2841
+Neural G0      1535
+Name: count, dtype: int64
+2025-11-06 10:27:15 - INFO - 
+------------------------------------------------------------
+2025-11-06 10:27:15 - INFO - Predicting for original embedding: X_scvi
+2025-11-06 10:27:15 - INFO - ------------------------------------------------------------
+2025-11-06 10:27:15 - DEBUG - Preparing embedding matrix with shape (780000, 10) for ccAF (expects 1472 features)
+2025-11-06 10:27:18 - DEBUG -  - Padded features: added 1462 zero columns to reach 1472
+2025-11-06 10:27:18 - DEBUG -  - Built AnnData: X shape (780000, 1472), var names set to ccAF genes
+2025-11-06 10:27:18 - INFO - Starting batched ccAF predictions: 780000 cells in 16 batches of up to 50000
+2025-11-06 10:27:18 - INFO - Batch 1/16: rows 0:50000
+2025-11-06 10:27:21 - INFO - Batch 2/16: rows 50000:100000
+2025-11-06 10:27:25 - INFO - Batch 3/16: rows 100000:150000
+2025-11-06 10:27:28 - INFO - Batch 4/16: rows 150000:200000
+2025-11-06 10:27:32 - INFO - Batch 5/16: rows 200000:250000
+2025-11-06 10:27:35 - INFO - Batch 6/16: rows 250000:300000
+2025-11-06 10:27:39 - INFO - Batch 7/16: rows 300000:350000
+2025-11-06 10:27:42 - INFO - Batch 8/16: rows 350000:400000
+2025-11-06 10:27:45 - INFO - Batch 9/16: rows 400000:450000
+2025-11-06 10:27:48 - INFO - Batch 10/16: rows 450000:500000
+2025-11-06 10:27:51 - INFO - Batch 11/16: rows 500000:550000
+2025-11-06 10:27:54 - INFO - Batch 12/16: rows 550000:600000
+2025-11-06 10:27:57 - INFO - Batch 13/16: rows 600000:650000
+2025-11-06 10:28:01 - INFO - Batch 14/16: rows 650000:700000
+2025-11-06 10:28:04 - INFO - Batch 15/16: rows 700000:750000
+2025-11-06 10:28:08 - INFO - Batch 16/16: rows 750000:780000
+2025-11-06 10:28:10 - INFO - Completed batched predictions
+2025-11-06 10:28:10 - INFO - Prediction distribution (top 10):
+2025-11-06 10:28:10 - INFO - 
+G1            274492
+Late G1       185247
+S/G2          109615
+G1/other       85583
+S              71686
+G2/M           40855
+Neural G0       9605
+M/Early G1      2917
+Name: count, dtype: int64
+2025-11-06 10:28:10 - INFO - 
+======================================================================
+2025-11-06 10:28:10 - INFO - STEP 3: Comparing harmonized X_pca vs baseline
+2025-11-06 10:28:10 - INFO - ======================================================================
+2025-11-06 10:28:10 - INFO - Loading harmonized data from: ../classifer/combined_har_data.h5ad
+2025-11-06 10:28:14 - INFO - Loaded harmonized: 780000 cells, 5634 genes
+2025-11-06 10:28:19 - INFO - Subset to first 780000 cells
+2025-11-06 10:28:19 - INFO - Getting predictions from harmonized X_pca...
+2025-11-06 10:28:19 - DEBUG - Preparing embedding matrix with shape (780000, 50) for ccAF (expects 1472 features)
+2025-11-06 10:28:22 - DEBUG -  - Padded features: added 1422 zero columns to reach 1472
+2025-11-06 10:28:22 - DEBUG -  - Built AnnData: X shape (780000, 1472), var names set to ccAF genes
+2025-11-06 10:28:22 - INFO - Starting batched ccAF predictions: 780000 cells in 16 batches of up to 50000
+2025-11-06 10:28:22 - INFO - Batch 1/16: rows 0:50000
+2025-11-06 10:28:25 - INFO - Batch 2/16: rows 50000:100000
+2025-11-06 10:28:29 - INFO - Batch 3/16: rows 100000:150000
+2025-11-06 10:28:33 - INFO - Batch 4/16: rows 150000:200000
+2025-11-06 10:28:36 - INFO - Batch 5/16: rows 200000:250000
+2025-11-06 10:28:40 - INFO - Batch 6/16: rows 250000:300000
+2025-11-06 10:28:44 - INFO - Batch 7/16: rows 300000:350000
+2025-11-06 10:28:47 - INFO - Batch 8/16: rows 350000:400000
+2025-11-06 10:28:50 - INFO - Batch 9/16: rows 400000:450000
+2025-11-06 10:28:53 - INFO - Batch 10/16: rows 450000:500000
+2025-11-06 10:28:57 - INFO - Batch 11/16: rows 500000:550000
+2025-11-06 10:29:00 - INFO - Batch 12/16: rows 550000:600000
+2025-11-06 10:29:03 - INFO - Batch 13/16: rows 600000:650000
+2025-11-06 10:29:06 - INFO - Batch 14/16: rows 650000:700000
+2025-11-06 10:29:09 - INFO - Batch 15/16: rows 700000:750000
+2025-11-06 10:29:12 - INFO - Batch 16/16: rows 750000:780000
+2025-11-06 10:29:15 - INFO - Completed batched predictions
+2025-11-06 10:29:15 - INFO - Harmonized predictions shape: 780000
+2025-11-06 10:29:15 - INFO - Harmonized prediction distribution:
+2025-11-06 10:29:15 - INFO - 
+G1            262206
+Late G1       163937
+G2/M          113252
+G1/other       69918
+S              66440
+S/G2           53619
+Neural G0      38386
+M/Early G1     12242
+Name: count, dtype: int64
+2025-11-06 10:29:15 - INFO - 
+======================================================================
+2025-11-06 10:29:15 - INFO - STEP 4: Generating confusion matrices and metrics
+2025-11-06 10:29:15 - INFO - ======================================================================
+2025-11-06 10:29:16 - INFO - Unique classes across all predictions: 8
+2025-11-06 10:29:16 - INFO - Classes: ['G1' 'G1/other' 'G2/M' 'Late G1' 'M/Early G1' 'Neural G0' 'S' 'S/G2']
+2025-11-06 10:29:16 - INFO - Output directories created: ccaf_original_comparisons/, ccaf_harmonized_comparisons/
+2025-11-06 10:29:18 - INFO - 
+----------------------------------------------------------------------
+2025-11-06 10:29:18 - INFO - Original data embeddings vs baseline:
+2025-11-06 10:29:18 - INFO - ----------------------------------------------------------------------
+2025-11-06 10:29:19 - INFO - Plotting heatmap: ccAF: Original X_pca_harmony vs Baseline (X_pca)
+2025-11-06 10:29:19 - INFO -  - Saved heatmap to ccaf_original_comparisons/confusion_X_pca_harmony_vs_X_pca.png
+2025-11-06 10:29:19 - INFO - Saved confusion matrix CSV: ccaf_original_comparisons/confusion_X_pca_harmony_vs_X_pca.csv
+2025-11-06 10:29:22 - INFO -   Accuracy: 0.4470
+2025-11-06 10:29:22 - INFO -   F1 (macro): 0.3265
+2025-11-06 10:29:22 - INFO -   F1 (weighted): 0.4553
+2025-11-06 10:29:22 - INFO -   Cells differing: 431360/780000
+2025-11-06 10:29:23 - INFO - Plotting heatmap: ccAF: Original X_scanorama vs Baseline (X_pca)
+2025-11-06 10:29:23 - INFO -  - Saved heatmap to ccaf_original_comparisons/confusion_X_scanorama_vs_X_pca.png
+2025-11-06 10:29:23 - INFO - Saved confusion matrix CSV: ccaf_original_comparisons/confusion_X_scanorama_vs_X_pca.csv
+2025-11-06 10:29:26 - INFO -   Accuracy: 0.3088
+2025-11-06 10:29:26 - INFO -   F1 (macro): 0.1357
+2025-11-06 10:29:26 - INFO -   F1 (weighted): 0.3231
+2025-11-06 10:29:26 - INFO -   Cells differing: 539153/780000
+2025-11-06 10:29:26 - INFO - Plotting heatmap: ccAF: Original X_scetm vs Baseline (X_pca)
+2025-11-06 10:29:27 - INFO -  - Saved heatmap to ccaf_original_comparisons/confusion_X_scetm_vs_X_pca.png
+2025-11-06 10:29:27 - INFO - Saved confusion matrix CSV: ccaf_original_comparisons/confusion_X_scetm_vs_X_pca.csv
+2025-11-06 10:29:30 - INFO -   Accuracy: 0.1657
+2025-11-06 10:29:30 - INFO -   F1 (macro): 0.0560
+2025-11-06 10:29:30 - INFO -   F1 (weighted): 0.1544
+2025-11-06 10:29:30 - INFO -   Cells differing: 650779/780000
+2025-11-06 10:29:31 - INFO - Plotting heatmap: ccAF: Original X_scvi vs Baseline (X_pca)
+2025-11-06 10:29:31 - INFO -  - Saved heatmap to ccaf_original_comparisons/confusion_X_scvi_vs_X_pca.png
+2025-11-06 10:29:31 - INFO - Saved confusion matrix CSV: ccaf_original_comparisons/confusion_X_scvi_vs_X_pca.csv
+2025-11-06 10:29:34 - INFO -   Accuracy: 0.2801
+2025-11-06 10:29:34 - INFO -   F1 (macro): 0.1254
+2025-11-06 10:29:34 - INFO -   F1 (weighted): 0.3019
+2025-11-06 10:29:34 - INFO -   Cells differing: 561540/780000
+2025-11-06 10:29:34 - INFO - 
+----------------------------------------------------------------------
+2025-11-06 10:29:34 - INFO - Harmonized X_pca vs baseline:
+2025-11-06 10:29:34 - INFO - ----------------------------------------------------------------------
+2025-11-06 10:29:35 - INFO - Plotting heatmap: ccAF: Harmonized X_pca vs Baseline (X_pca)
+2025-11-06 10:29:35 - INFO -  - Saved heatmap to ccaf_harmonized_comparisons/confusion_harmonized_X_pca_vs_baseline.png
+2025-11-06 10:29:35 - INFO - Saved confusion matrix CSV: ccaf_harmonized_comparisons/confusion_harmonized_X_pca_vs_baseline.csv
+2025-11-06 10:29:38 - INFO -   Accuracy: 0.2358
+2025-11-06 10:29:38 - INFO -   F1 (macro): 0.1426
+2025-11-06 10:29:38 - INFO -   F1 (weighted): 0.2518
+2025-11-06 10:29:38 - INFO -   Cells differing: 596107/780000
+2025-11-06 10:29:38 - INFO - 
+======================================================================
+2025-11-06 10:29:38 - INFO - STEP 5: Saving results
+2025-11-06 10:29:38 - INFO - ======================================================================
+2025-11-06 10:29:43 - INFO - Saved all predictions: ccaf_all_predictions_comparison.csv
+2025-11-06 10:29:43 - INFO - Saved metrics: ccaf_all_metrics_comparison.csv
+2025-11-06 10:29:43 - INFO - Saved metrics summary plot: ccaf_metrics_summary_all.png
+2025-11-06 10:29:43 - INFO - 
+======================================================================
+2025-11-06 10:29:43 - INFO - ANALYSIS COMPLETE!
+2025-11-06 10:29:43 - INFO - ======================================================================
+2025-11-06 10:29:43 - INFO - 
+Summary:
+2025-11-06 10:29:43 - INFO -   - Baseline predictions: 780000 cells
+2025-11-06 10:29:43 - INFO -   - Original embedding comparisons: 4
+2025-11-06 10:29:43 - INFO -   - Harmonized predictions: 780000 cells
+2025-11-06 10:29:43 - INFO - 
+Output files:
+2025-11-06 10:29:43 - INFO -   - Predictions: ccaf_all_predictions_comparison.csv
+2025-11-06 10:29:43 - INFO -   - Metrics: ccaf_all_metrics_comparison.csv
+2025-11-06 10:29:43 - INFO -   - Metrics plot: ccaf_metrics_summary_all.png
+2025-11-06 10:29:43 - INFO -   - Original comparisons: ccaf_original_comparisons/
+2025-11-06 10:29:43 - INFO -   - Harmonized comparisons: ccaf_harmonized_comparisons/
+2025-11-06 10:29:43 - INFO -   - Log file: ccaf_comprehensive_eval.log
+2025-11-06 10:29:43 - INFO - 
+Completed at: 2025-11-06 10:29:43
