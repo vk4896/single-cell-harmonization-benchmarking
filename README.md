@@ -11,7 +11,6 @@
 
 **Project:** [Anubio AI](https://anubio.ai/) · **Role:** Intern — extend, validate,
 and benchmark the harmonization model.
-Results write-up: [`report/Harmonization_Review.pdf`](report/Harmonization_Review.pdf).
 
 Once harmonized, the latent representations support **perturbation modelling**
 (drug/cytokine-driven state shifts), **patient stratification** (healthy vs. diseased,
@@ -29,9 +28,7 @@ Integration* — plus supporting environment and report material.
 .
 ├── README.md
 ├── .gitignore
-│
-├── report/                              # Deliverable: evaluation report
-│   └── Harmonization_Review.pdf         #   benchmarking results write-up
+│ 
 │
 ├── environment/                         # Deliverable: reproducible training/eval setup
 │   ├── requirements.txt                 #   core deps (scanpy, anndata, sklearn)
@@ -187,15 +184,5 @@ training knobs are in `environment/config_example.yaml`.
 |---|---|
 | Harmonised multi-study PBMC reference atlas (AnnData) | Produced as `.h5ad` (private storage, not committed) |
 | Source code (Python + PyTorch) with reproducible scripts | `01`–`05` `scripts/` + `models/`, `environment/` |
-| Evaluation report comparing harmonisation metrics | `report/Harmonization_Review.pdf` + Results above |
 | Slide deck / manuscript draft | _pending_ |
 
----
-
-## ⚠️ Security note
-
-A data-download script that previously lived in this folder contained a **hard-coded
-Azure Storage account key** (it had also leaked into a notebook). That script has been
-removed and the key scrubbed from all remaining files. **Action required:** treat the
-key as compromised and **rotate the Azure Storage account key** in the Azure portal.
-Never commit credentials — use environment variables or a secrets manager.
